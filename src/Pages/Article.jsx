@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import cx from "classnames";
 import Header from "../Components/Header/Header";
 import { getAllArticles } from "../../mockAPI/allArticles";
-import ArticleBody from "../Components/Article/ArticleBody";
+import ArticleContent from "../Components/Article/ArticleContent";
 import ReturnHome from "../Components/Article/ReturnHome";
 import createDisplayDate from "../Helpers/createDisplayDate";
 
@@ -52,13 +52,14 @@ const Article = () => {
 
       <div className="container is-max-desktop">
         <ReturnHome />
-        <ArticleBody
+        <ArticleContent
           title={title}
           imageUrl={image}
           text={text}
           date={dateToDisplay}
         />
         <ReturnHome />
+        <div className="pb-6" />
       </div>
     </div>
   );

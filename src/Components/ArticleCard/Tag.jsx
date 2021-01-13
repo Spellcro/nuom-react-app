@@ -1,25 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
 import { capitalize } from "lodash";
+import "../../Styles/article-tag.css";
 
 const Tag = props => {
-  const { tag, handleTagClick } = props;
+  const { tag } = props;
   return (
-    <div
-      className={cx("button is-light is-small")}
-      style={{ marginRight: "8px", padding: "1px 4px 1px 4px" }}
-      onClick={() => {} /*handleTagClick*/}
-      value={tag}
-    >
+    <div className="article-tag" value={tag}>
       {capitalize(tag)}
     </div>
   );
 };
 
 Tag.propTypes = {
-  tag: PropTypes.string,
-  handleTagClick: PropTypes.func
+  tag: PropTypes.string
 };
 
 export default Tag;
