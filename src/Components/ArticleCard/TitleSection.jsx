@@ -32,7 +32,9 @@ const TitleSection = props => {
 
 TitleSection.propTypes = {
   title: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string)
+  tags: PropTypes.arrayOf(PropTypes.string),
+  handleTagClick: PropTypes.func,
+  handleArticleClick: PropTypes.func
 };
 
 export default TitleSection;

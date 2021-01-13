@@ -25,7 +25,6 @@ const Filter = props => {
 
 Filter.propTypes = {
   tagList: PropTypes.arrayOf(PropTypes.string),
-  selectedTags: PropTypes.arrayOf(PropTypes.string),
   onChange: PropTypes.func
 };
 

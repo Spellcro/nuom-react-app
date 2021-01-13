@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import Filter from "../Components/Filter/Filter";
 import ArticleCard from "../Components/ArticleCard/ArticleCard";
-
+import Header from "../Components/Header/Header";
 import { getAllTags } from "../../mockAPI/allTags";
 import { getAllArticles } from "../../mockAPI/allArticles";
 
@@ -71,13 +71,7 @@ const Home = () => {
 
   return (
     <div className={cx("container")}>
-      <section className="hero">
-        <div className="hero-body">
-          <div className="container">
-            <h1 className="title">The Great Article Database</h1>
-          </div>
-        </div>
-      </section>
+      <Header />
       <section className={cx("section")}>
         <h2 className={cx("subtitle")}>Filter by tag:</h2>
         <Filter onChange={handleUpdateFilters} tagList={tagList} />

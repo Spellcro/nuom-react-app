@@ -18,7 +18,8 @@ const Tag = props => {
 };
 
 Tag.propTypes = {
-  tag: PropTypes.string
+  tag: PropTypes.string,
+  handleTagClick: PropTypes.func
 };
 
 export default Tag;

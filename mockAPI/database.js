@@ -1,8 +1,7 @@
 import firebase from "firebase";
 
-
 export const config = {
-  apiKey: 'AIzaSyBnTbbOhrM3faUi24kiaSOgU5ZKEgw7bhA',
+  apiKey: "AIzaSyBnTbbOhrM3faUi24kiaSOgU5ZKEgw7bhA",
   authDomain: "interviewbucket.firebaseapp.com",
   databaseURL: "https://interviewbucket.firebaseio.com",
   projectId: "interviewbucket",
@@ -18,24 +17,22 @@ class Firebase {
   }
 }
 
-const database = (function () {
-  let instance
+const database = (function() {
+  let instance;
 
-  function createInstance(){
-    const firebase = new Firebase()
-    return firebase
+  function createInstance() {
+    const firebase = new Firebase();
+    return firebase;
   }
 
   return {
-        getInstance: function () {
-            if (!instance) {
-                instance = createInstance();
-            }
-            return instance;
-        }
+    getInstance: function() {
+      if (!instance) {
+        instance = createInstance();
+      }
+      return instance;
     }
+  };
+})();
 
-
-})()
- 
 export default database;
